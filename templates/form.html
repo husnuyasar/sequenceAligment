@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Sequence Aligment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <br>
+    <div class="input-group input-group-sm mb-5 ">
+        <h1>Global Sequence Aligment</h1>
+    </div>
+<form action="/send" method="post">
+    <div class="input-group input-group-sm mb-3 ">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="">Sequence 1</span>
+          </div>
+          <input type="text" class="form-control" name="seq1">
+
+        </div>
+    </div>
+    <div class="input-group input-group-sm mb-3 ">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="">Sequence 2</span>
+          </div>
+          <input type="text" class="form-control" name="seq2">
+
+        </div>
+    </div>
+    <div class="input-group input-group-sm mb-3 ">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="">Gap Penalty</span>
+          </div>
+          <input type="number" class="form-control" name="gap" value="0">
+
+        </div>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Matris</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01" name="matris">
+        <option selected>Choose...</option>
+        <option value="blosum62">Blosum62</option>
+        <option value="pam120">Pam120</option>
+        <option value="pam250">Pam250</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+</form>
+</div>
+</body>
+</html>

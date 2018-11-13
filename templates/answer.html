@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <br>
+    <h2>Score Tablosu</h2>
+    <br>
+  <table class="table table-bordered" id="firtTable">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      {% for item in range(seq1Len) %}
+        <th scope="col">{{ seq1[item] }}</th>
+
+      {% endfor %}
+    </tr>
+  </thead>
+  <thead>
+
+  {% for a in range(OurMatrix|length) %}
+    <tr>
+        {% if a== 0 %}
+            <th scope="row"></th>
+        {% endif %}
+        {% if a!= 0 %}
+            <th scope="row">{{ seq2[a-1] }}</th>
+        {% endif %}
+        {% for b in range(OurMatrix[a]|length) %}
+
+        <td>{{ OurMatrix[a][b]}}</td>
+        {% endfor %}
+    </tr>
+  {% endfor %}
+  </thead>
+  <tbody >
+
+  </tbody>
+</table>
+    <br>
+<h2>Yön Haritası</h2>
+    <br>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+
+      {% for item in range(seq1Len) %}
+        <th scope="col">{{ seq1[item] }}</th>
+
+      {% endfor %}
+    </tr>
+  </thead>
+  <thead>
+
+  {% for a in range(sideMatrix|length) %}
+    <tr>
+
+         <th scope="row">{{ seq2[a] }}</th>
+
+        {% for b in range(sideMatrix[a]|length) %}
+
+        <td>{{ sideMatrix[a][b]}}</td>
+        {% endfor %}
+    </tr>
+  {% endfor %}
+  </thead>
+  <tbody >
+
+  </tbody>
+</table>
+    <br>
+<h2>Dizilim Gösterimi</h2>
+    <br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+
+      {% for item in range(seq1Len) %}
+        <th scope="col">{{ seq1[item] }}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+     {% for i in dizilim %}
+        <th>{{ i }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody >
+
+  </tbody>
+</table>
+
+</div>
+
+{% for i in dizilim %}
+<p>{{ i }}</p>
+{% endfor %}
+</body>
+<script language="javascript">
+
+</script>
+</html>
